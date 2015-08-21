@@ -40,7 +40,7 @@ public class Main {
 		int i = 0;
 		try (BufferedReader br = new BufferedReader(new FileReader(filename))) {
 			String str = "";
-			while ((str = br.readLine()) != null) {
+			while ((str = br.readLine()) != null && i < size) {
 				if (!str.matches("^\\s*$")) {
 					if (i == 0) {
 						result[i] = evalString(str, startNum);
